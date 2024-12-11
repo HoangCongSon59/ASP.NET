@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.NET_HoangCongSon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|d:\\asp.net_hoangcongson\\asp.net_hoangcongson\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|solutionrelative:asp.net_hoangcongson\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|D:\\ASP.NET_HoangCongSon\\asp.net_hoangcongson\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|solutionrelative:asp.net_hoangcongson\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|D:\\ASP.NET_HoangCongSon\\asp.net_hoangcongson\\context\\dbmodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|solutionrelative:asp.net_hoangcongson\\context\\dbmodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|D:\\ASP.NET_HoangCongSon\\asp.net_hoangcongson\\context\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34B598D-54A3-47F6-B426-5942299747BE}|ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon.csproj|solutionrelative:asp.net_hoangcongson\\context\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeModel.cs",
+              "DocumentMoniker": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Context\\HomeModel.cs",
+              "RelativeDocumentMoniker": "ASP.NET_HoangCongSon\\Context\\HomeModel.cs",
+              "ToolTip": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Context\\HomeModel.cs",
+              "RelativeToolTip": "ASP.NET_HoangCongSon\\Context\\HomeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:50:42.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ASP.NET_HoangCongSon\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ASP.NET_HoangCongSon\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAUwGYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T07:49:19.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbModel.Context.cs",
+              "DocumentMoniker": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Context\\dbModel.Context.cs",
+              "RelativeDocumentMoniker": "ASP.NET_HoangCongSon\\Context\\dbModel.Context.cs",
+              "ToolTip": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Context\\dbModel.Context.cs",
+              "RelativeToolTip": "ASP.NET_HoangCongSon\\Context\\dbModel.Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T07:44:23.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ASP.NET_HoangCongSon\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ASP.NET_HoangCongSon\\ASP.NET_HoangCongSon\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ASP.NET_HoangCongSon\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T07:43:02.971Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
