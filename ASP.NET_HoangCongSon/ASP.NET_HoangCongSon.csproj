@@ -163,9 +163,8 @@
     <Compile Include="Controllers\GridController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LargeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,6 +210,9 @@
     <Content Include="Content\images\banners\slide1.jpg" />
     <Content Include="Content\images\banners\slide2.jpg" />
     <Content Include="Content\images\banners\slide3.jpg" />
+    <Content Include="Content\images\category\Ipad.jpg" />
+    <Content Include="Content\images\category\Laptop.jpg" />
+    <Content Include="Content\images\category\Phone.jpg" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\icons\flags\AU%402x.png" />
     <Content Include="Content\images\icons\flags\AU.png" />
@@ -262,6 +264,13 @@
     <Content Include="Content\images\posts\2.jpg" />
     <Content Include="Content\images\posts\3.jpg" />
     <Content Include="Content\images\posts\4.jpg" />
+    <Content Include="Content\images\product\iphone12.jpg" />
+    <Content Include="Content\images\product\iphone6.jpg" />
+    <Content Include="Content\images\product\iphone7.jpg" />
+    <Content Include="Content\images\product\iphone8.jpg" />
+    <Content Include="Content\images\product\iphoneX.jpg" />
+    <Content Include="Content\images\product\iphoneXS.jpg" />
+    <Content Include="Content\images\product\samsunggalaxy.jpg" />
     <Content Include="Context\dbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>dbModel.Context.cs</LastGenOutput>
@@ -273,6 +282,25 @@
       <LastGenOutput>dbModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fonts\fontawesome\css\all.css" />
+    <Content Include="fonts\fonts\fontawesome\css\all.min.css" />
+    <Content Include="fonts\fonts\fontawesome\css\brands.css" />
+    <Content Include="fonts\fonts\fontawesome\css\brands.min.css" />
+    <Content Include="fonts\fonts\fontawesome\css\fontawesome.css" />
+    <Content Include="fonts\fonts\fontawesome\css\fontawesome.min.css" />
+    <Content Include="fonts\fonts\fontawesome\css\regular.css" />
+    <Content Include="fonts\fonts\fontawesome\css\regular.min.css" />
+    <Content Include="fonts\fonts\fontawesome\css\solid.css" />
+    <Content Include="fonts\fonts\fontawesome\css\solid.min.css" />
+    <Content Include="fonts\fonts\fontawesome\css\svg-with-js.css" />
+    <Content Include="fonts\fonts\fontawesome\css\svg-with-js.min.css" />
+    <Content Include="fonts\fonts\fontawesome\css\v4-shims.css" />
+    <Content Include="fonts\fonts\fontawesome\css\v4-shims.min.css" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="fonts\fonts\roboto\font.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -297,6 +325,28 @@
     <Content Include="Context\dbModel.edmx.diagram">
       <DependentUpon>dbModel.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\fonts\fontawesome\.DS_Store" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="fonts\fonts\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="fonts\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="fonts\fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="fonts\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="fonts\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="fonts\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -329,8 +379,8 @@
     <Content Include="Views\Grid\Listing.cshtml" />
     <Content Include="Views\Large\Listing.cshtml" />
     <Content Include="Views\Cart\Shopping.cshtml" />
-    <Content Include="Views\Login\User.cshtml" />
-    <Content Include="Views\Register\User.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

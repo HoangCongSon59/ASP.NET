@@ -18,7 +18,7 @@
     <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
     <!-- Font awesome 5 -->
-    <link href="fonts/css/fontawesome//Content/all.min.css" type="text/css" rel="stylesheet">
+    <link href="~/fonts/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
 
     <!-- custom style -->
     <link href="/Content/css/ui.css" rel="stylesheet" type="text/css" />
@@ -206,8 +206,8 @@
                     <aside class="col-md col-6">
                         <h6 class="title">Account</h6>
                         <ul class="list-unstyled">
-                            <li> <a href="#"> User Login </a></li>
-                            <li> <a href="#"> User register </a></li>
+                            <li> <a href="@Url.Action("Login", "User")"> User Login </a></li>
+                            <li> <a href="@Url.Action("Register", "User")"> User register </a></li>
                             <li> <a href="#"> Account Setting </a></li>
                             <li> <a href="#"> My Orders </a></li>
                         </ul>
