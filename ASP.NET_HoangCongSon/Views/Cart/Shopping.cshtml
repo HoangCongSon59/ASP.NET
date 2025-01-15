@@ -1,9 +1,36 @@
-﻿
+﻿@model IEnumerable<ASP.NET_HoangCongSon.Models.CartModel>
 @{
     ViewBag.Title = "Shopping";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- ========================= SECTION CONTENT ========================= -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#removecart").click(function () {
+            var model = {};
+            //lấy id sản phẩm
+            model.Id = $("#productid").val();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Remove", "Cart")',
+                data:  JSON.stringify(model) ,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    $('#CartCount').text(@Session["count"] - 1);
+                    $("#product-" + model.Id).remove();
+                },
+                error: function () {
+                    alert("Lỗi trong khi thêm vào giỏ hàng!");
+                }
+            });
+            return false;
+        });
+    });
+</script>
 <section class="section-content padding-y">
     <div class="container">
 
@@ -14,110 +41,56 @@
                     <table class="table table-borderless table-shopping-cart">
                         <thead class="text-muted">
                             <tr class="small text-uppercase">
-                                <th scope="col">Product</th>
-                                <th scope="col" width="120">Quantity</th>
-                                <th scope="col" width="120">Price</th>
+                                <th scope="col">Sản phẩm</th>
+                                <th scope="col" width="120">Số lượng</th>
+                                <th scope="col" width="120">Giá</th>
                                 <th scope="col" class="text-right" width="200"> </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <figure class="itemside">
-                                        <div class="aside"><img src="~/Content/images/items/1.jpg" class="img-sm"></div>
-                                        <figcaption class="info">
-                                            <a href="#" class="title text-dark">Some name of item goes here nice</a>
-                                            <p class="text-muted small">Size: XL, Color: blue, <br> Brand: Gucci</p>
-                                        </figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <div class="price-wrap">
-                                        <var class="price">$1156.00</var>
-                                        <small class="text-muted"> $315.20 each </small>
-                                    </div> <!-- price-wrap .// -->
-                                </td>
-                                <td class="text-right">
-                                    <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                    <a href="" class="btn btn-light"> Remove</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <figure class="itemside">
-                                        <div class="aside"><img src="~/Content/images/items/2.jpg" class="img-sm"></div>
-                                        <figcaption class="info">
-                                            <a href="#" class="title text-dark">Product name  goes here nice</a>
-                                            <p class="text-muted small">Size: XL, Color: blue, <br> Brand: Gucci</p>
-                                        </figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <div class="price-wrap">
-                                        <var class="price">$149.97</var>
-                                        <small class="text-muted"> $75.00 each </small>
-                                    </div> <!-- price-wrap .// -->
-                                </td>
-                                <td class="text-right">
-                                    <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                    <a href="" class="btn btn-light btn-round"> Remove</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <figure class="itemside">
-                                        <div class="aside"><img src="~/Content/images/items/3.jpg" class="img-sm"></div>
-                                        <figcaption class="info">
-                                            <a href="#" class="title text-dark">Another name of some product goes just here as a demo text </a>
-                                            <p class="small text-muted">Size: XL, Color: blue,  Brand: Tissot</p>
-                                        </figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <div class="price-wrap">
-                                        <var class="price">$98.00</var>
-                                        <small class="text-muted"> $578.00 each</small>
-                                    </div> <!-- price-wrap .// -->
-                                </td>
-                                <td class="text-right">
-                                    <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                    <a href="" class="btn btn-light btn-round"> Remove</a>
-                                </td>
-                            </tr>
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr id="product-@item.Product.Id">
+                                        <td>
+                                            <figure class="itemside">
+                                                <div class="aside"><img src="~/Content/images/product/@item.Product.Avartar" class="img-sm"></div>
+                                                <figcaption class="info">
+                                                    <a href="#" class="title text-dark">@item.Product.Name</a>
+                                                </figcaption>
+                                            </figure>
+                                        </td>
+                                        <td>
+                                            <input type="text" value="@item.Quantity" />
+                                        </td>
+                                        <td>
+                                            <div class="price-wrap">
+                                                <var class="price">@String.Format("{0:0,0}₫", item.Product.Price * item.Quantity)</var>
+                                            </div> <!-- price-wrap .// -->
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="hidden" value="@item.Product.Id" id="productid"/>
+                                            <a href="" class="btn btn-light" id="removecart"> Xóa sản phẩm</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <th scope="col">Không có sản phẩm nào trong giỏ hàng</th>
+                            }
                         </tbody>
                     </table>
 
                     <div class="card-body border-top">
-                        <a href="#" class="btn btn-primary float-md-right"> Make Purchase <i class="fa fa-chevron-right"></i> </a>
-                        <a href="#" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Continue shopping </a>
+                        <a href="@Url.Action("Index", "Payment")" class="btn btn-primary float-md-right"> Thanh toán <i class="fa fa-chevron-right"></i> </a>
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Tiếp tục mua sắm </a>
                     </div>
                 </div> <!-- card.// -->
 
                 <div class="alert alert-success mt-3">
-                    <p class="icontext"><i class="icon text-success fa fa-truck"></i> Free Delivery within 1-2 weeks</p>
+                    <p class="icontext"><i class="icon text-success fa fa-truck"></i> Giao hàng miễn phí trong vòng 1-2 tuần</p>
                 </div>
 
             </main> <!-- col.// -->
@@ -126,11 +99,11 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label>Have coupon?</label>
+                                <label>Mã giảm giá</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="" placeholder="Coupon code">
+                                    <input type="text" class="form-control" name="" placeholder="Nhập mã giảm giá">
                                     <span class="input-group-append">
-                                        <button class="btn btn-primary">Apply</button>
+                                        <button class="btn btn-primary">Áp dụng</button>
                                     </span>
                                 </div>
                             </div>
@@ -140,16 +113,10 @@
                 <div class="card">
                     <div class="card-body">
                         <dl class="dlist-align">
-                            <dt>Total price:</dt>
-                            <dd class="text-right">USD 568</dd>
-                        </dl>
-                        <dl class="dlist-align">
-                            <dt>Discount:</dt>
-                            <dd class="text-right">USD 658</dd>
-                        </dl>
-                        <dl class="dlist-align">
-                            <dt>Total:</dt>
-                            <dd class="text-right  h5"><strong>$1,650</strong></dd>
+                            <dt>Thành tiền:</dt>
+                            <dd class="text-right h5" id="removecart">
+                                <strong>@String.Format("{0:0,0}₫", Model?.Sum(item => item.Quantity * item.Product.Price) ?? 0)</strong>
+                            </dd>
                         </dl>
                         <hr>
                         <p class="text-center mb-3">
@@ -167,22 +134,25 @@
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name border-top padding-y">
     <div class="container">
-        <h6>Payment and refund policy</h6>
+        <h6>Chính sách thanh toán và hoàn tiền</h6>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Chúng tôi cam kết cung cấp các phương thức thanh toán linh hoạt và an toàn để đáp ứng nhu cầu của khách hàng. 
+            Quý khách có thể lựa chọn thanh toán qua chuyển khoản ngân hàng, thẻ tín dụng, thẻ ghi nợ, ví điện tử, hoặc 
+            tiền mặt tại điểm giao dịch (nếu áp dụng). Tất cả các giao dịch thanh toán được xử lý thông qua hệ thống bảo 
+            mật cao, đảm bảo thông tin của khách hàng luôn được giữ an toàn.Sau khi hoàn tất thanh toán, hệ thống sẽ gửi 
+            thông báo xác nhận qua email hoặc tin nhắn SMS. Quý khách vui lòng kiểm tra thông tin để đảm bảo giao dịch thành 
+            công. Nếu có bất kỳ vấn đề nào phát sinh, vui lòng liên hệ với bộ phận hỗ trợ khách hàng để được hỗ trợ kịp thời.
+            Chúng tôi không chịu trách nhiệm đối với các lỗi phát sinh từ việc cung cấp thông tin thanh toán không chính xác.
+            Quý khách vui lòng kiểm tra kỹ thông tin trước khi thực hiện giao dịch.
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Chúng tôi cam kết thực hiện hoàn tiền trong trường hợp khách hàng không nhận được sản phẩm hoặc dịch vụ như cam 
+            kết, hoặc phát sinh lỗi kỹ thuật không thể khắc phục từ phía nhà cung cấp. Yêu cầu hoàn tiền cần được gửi trong 
+            vòng 7 ngày kể từ ngày giao dịch, kèm theo đầy đủ thông tin liên quan. Sau khi tiếp nhận, chúng tôi sẽ xác minh 
+            và xử lý trong thời gian 5-7 ngày làm việc. Số tiền hoàn sẽ được chuyển lại qua phương thức thanh toán ban đầu. 
+            Lưu ý, chính sách hoàn tiền không áp dụng đối với sản phẩm hoặc dịch vụ đã sử dụng một phần, hoặc khi khách hàng 
+            không tuân thủ các điều kiện quy định. Mọi thắc mắc, vui lòng liên hệ với bộ phận hỗ trợ để được giải đáp kịp 
+            thời.
         </p>
 
     </div><!-- container // -->

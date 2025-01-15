@@ -164,3 +164,7 @@ D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\obj\Debug\ASP.NET_HoangCong
 D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\obj\Debug\ASP.NET_.B7DC16C7.Up2Date
 D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\obj\Debug\ASP.NET_HoangCongSon.dll
 D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\obj\Debug\ASP.NET_HoangCongSon.pdb
+D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\bin\PagedList.dll
+D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\bin\PagedList.Mvc.dll
+D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\bin\PagedList.xml
+D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\bin\PagedList.Mvc.xml

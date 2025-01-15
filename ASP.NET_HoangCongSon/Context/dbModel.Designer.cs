@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\Context\dbModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\ASP.NET\ASP.NET_HoangCongSon\ASP.NET_HoangCongSon\Context\dbModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

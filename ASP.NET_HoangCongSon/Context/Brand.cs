@@ -11,7 +11,8 @@ namespace ASP.NET_HoangCongSon.Context
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web;
+
     public partial class Brand
     {
         public int Id { get; set; }
@@ -23,5 +24,7 @@ namespace ASP.NET_HoangCongSon.Context
         public Nullable<System.DateTime> CreatedOnUtc { get; set; }
         public Nullable<System.DateTime> UpdatedOnUtc { get; set; }
         public Nullable<bool> Deleted { get; set; }
+        public HttpPostedFileBase ImageUpload { get; set; }
+
     }
 }
